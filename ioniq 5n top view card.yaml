@@ -1,9 +1,9 @@
 type: picture-elements
-image: /local/ioniqnb/ioniq5-top-rhd.png
+image: /local/ioniq5nb/ioniq5-top-rhd.png
 elements:
   - type: image
     entity: sensor.ioniq_5_data
-    image: /local/ioniqnb/ioniq5-top-rhd.png
+    image: /local/ioniq5nb/ioniq5-top-rhd.png
     style:
       left: 50%
       top: 50%
@@ -13,8 +13,8 @@ elements:
   - type: image
     entity: binary_sensor.ioniq_5_steering_wheel_heater
     state_image:
-      "off": /local/ioniqnb/ioniq5-top-rhd.png
-      "on": /local/ioniqb/wheel-on.png
+      "off": /local/ioniq5nb/ioniq5-top-rhd.png
+      "on": /local/ioniq5nb/wheel-on.png
     style:
       left: 50%
       top: 50%
@@ -23,8 +23,8 @@ elements:
   - type: image
     entity: binary_sensor.ioniq_5_front_left_door
     state_image:
-      "off": /local/ioniqnb/ioniq-front-left.png
-      "on": /local/ioniqnb/ioniq-front-left-open.png
+      "off": /local/ioniq5nb/ioniq-front-left.png
+      "on": /local/ioniq5nb/ioniq-front-left-open.png
     style:
       left: 50%
       top: 50%
@@ -33,8 +33,8 @@ elements:
   - type: image
     entity: binary_sensor.ioniq_5_front_right_door
     state_image:
-      "off": /local/ioniqnb/ioniq-front-right.png
-      "on": /local/ioniqb/ioniq-front-right-open.png
+      "off": /local/ioniq5nb/ioniq-front-right.png
+      "on": /local/ioniq5nb/ioniq-front-right-open.png
     style:
       left: 50%
       top: 50%
@@ -43,8 +43,8 @@ elements:
   - type: image
     entity: binary_sensor.ioniq_5_back_left_door
     state_image:
-      "off": /local/ioniqnb/ioniq-rear-left.png
-      "on": /local/ioniqnb/ioniq-rear-left-open.png
+      "off": /local/ioniq5nb/ioniq-rear-left.png
+      "on": /local/ioniq5nb/ioniq-rear-left-open.png
     style:
       left: 50%
       top: 50%
@@ -53,8 +53,8 @@ elements:
   - type: image
     entity: binary_sensor.ioniq_5_back_right_door
     state_image:
-      "off": /local/ioniqnb/ioniq-rear-right.png
-      "on": /local/ioniqnb/ioniq-rear-right-open.png
+      "off": /local/ioniq5nb/ioniq-rear-right.png
+      "on": /local/ioniq5nb/ioniq-rear-right-open.png
     style:
       left: 50%
       top: 50%
@@ -63,8 +63,8 @@ elements:
   - type: image
     entity: binary_sensor.ioniq_5_hood
     state_image:
-      "off": /local/ioniqnb/ioniq-hood.png
-      "on": /local/ioniqnb/ioniq-hood-open.png
+      "off": /local/ioniq5nb/ioniq-hood.png
+      "on": /local/ioniq5nb/ioniq-hood-open.png
     style:
       left: 50%
       top: 50%
@@ -73,8 +73,8 @@ elements:
   - type: image
     entity: binary_sensor.ioniq_5_trunk
     state_image:
-      "off": /local/ioniqnb/ioniq-hatch.png
-      "on": /local/ioniqnb/ioniq-hatch-open.png
+      "off": /local/ioniq5nb/ioniq-hatch.png
+      "on": /local/ioniq5nb/ioniq-hatch-open.png
     style:
       left: 50%
       top: 50%

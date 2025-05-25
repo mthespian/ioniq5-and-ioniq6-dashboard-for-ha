@@ -1,9 +1,9 @@
 type: picture-elements
-image: /local/ioniqa/ioniq5-back.png
+image: /local/ioniq5a/ioniq5-back.png
 elements:
   - type: image
     entity: lock.ioniq_5_door_lock
-    image: /local/ioniqa/ioniq5-back.png
+    image: /local/ioniq5a/ioniq5-back.png
     style:
       left: 50%
       top: 50%
@@ -12,18 +12,18 @@ elements:
     entity: sensor.ioniq_battery_dots
     tap_action:
       action: none
-    image: /local/ioniqa/centre-squares.png
+    image: /local/ioniq5a/centre-squares.png
     state_image:
-      "10": /local/ioniqa/10.png
-      "20": /local/ioniqa/20.png
-      "30": /local/ioniqa/30.png
-      "40": /local/ioniqa/40.png
-      "50": /local/ioniqa/50.png
-      "60": /local/ioniqa/60.png
-      "70": /local/ioniqa/70.png
-      "80": /local/ioniqa/80.png
-      "90": /local/ioniqa/90.png
-      "100": /local/ioniqa/100.png
+      "10": /local/ioniq5a/10.png
+      "20": /local/ioniq5a/20.png
+      "30": /local/ioniq5a/30.png
+      "40": /local/ioniq5a/40.png
+      "50": /local/ioniq5a/50.png
+      "60": /local/ioniq5a/60.png
+      "70": /local/ioniq5a/70.png
+      "80": /local/ioniq5a/80.png
+      "90": /local/ioniq5a/90.png
+      "100": /local/ioniq5a/100.png
     style:
       left: 50%
       top: 50%
@@ -42,9 +42,9 @@ elements:
     entity: binary_sensor.ioniq_5_engine
     tap_action:
       action: none
-    image: /local/ioniqa/night-light.png
+    image: /local/ioniq5a/night-light.png
     state_image:
-      "on": /local/ioniqa/night-light-on.png
+      "on": /local/ioniq5a/night-light-on.png
     style:
       left: 50%
       top: 50%
@@ -52,7 +52,7 @@ elements:
       heigth: 100%
   - type: image
     entity: device_tracker.ioniq5_device_tracker
-    image: /local/ioniqa/backpanel.png
+    image: /local/ioniq5a/backpanel.png
     style:
       left: 50%
       top: 50%
@@ -62,10 +62,10 @@ elements:
     entity: binary_sensor.ioniq_5_ev_battery_charge
     tap_action:
       action: none
-    image: /local/ioniqa/brake-light.png
+    image: /local/ioniq5a/brake-light.png
     state_image:
-      "on": /local/ioniqa/brake-light-on.png
-      "off": /local/ioniqa/brake-light.png
+      "on": /local/ioniq5a/brake-light-on.png
+      "off": /local/ioniq5a/brake-light.png
     style:
       left: 50%
       top: 50%
@@ -74,8 +74,8 @@ elements:
   - type: image
     entity: binary_sensor.ioniq_5_ev_battery_plug
     state_image:
-      "off": /local/ioniqa/unplugged.png
-      "on": /local/ioniqa/pluggedin.png
+      "off": /local/ioniq5a/unplugged.png
+      "on": /local/ioniq5a/pluggedin.png
     style:
       top: 31%
       left: 88%

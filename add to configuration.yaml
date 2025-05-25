@@ -59,4 +59,4 @@ sensor:
         friendly_name: 'Miles Per kWh'
         unique_id: mpkwhc0n5umpt10n
         value_template: >
-          {{ (621.371192237334 / states('PUT YOUR AVERAGE ENERGY CONSUPTION SENSOR HERE') | float) | round(2) }}
+          {{ (621.371192237334 / states('PUT YOUR AVERAGE ENERGY CONSUMPTION SENSOR HERE') | float) | round(2) }}

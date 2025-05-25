@@ -7,7 +7,7 @@
 
 First off, let me start by what you 100% need to use this,
 
-For ioniq 5 N use the ioniq 5 n yaml's and the ioniqna and ioniqnb folders instead.
+For ioniq 5 N use the ioniq 5 n yaml's and the ioniq5na and ioniq5nb folders instead.
 
 IF you have a 2024 ioniq 5, please check your entities and if they contain 2024 before the name if so replace all code with 2024_ioniq_5 instead of ioniq_5
 
@@ -17,51 +17,63 @@ Download the following from HACS:
  - card-mod
  - slider-entity-row
  - button-card
-also install ftp addon from addons as it will make this easier.
+
+If you're running HAOS, installing and configuring the FTP addon from addons will make the uploads easier.
 
 
-1.	Upload files from fonts into your www folder (local) (not the font folder but the files within)
-	
-2.	Upload the folders ioniq5a, ioniq5b (or ioniq6a, ioniq6b) as well as charge port into your www folder (local)
+1.  Upload files from the  `fonts` folder into your  `www` folder (local) (not the fonts folder but the files within)
+    
+2.  Upload the appropriate  a  and  b  folders for your vehicle into your  `www` folder (local)
+   - For Ioniq 5, upload the `ioniq5a` and `ioniq5b` folders
+   - For Ioniq 6, upload the `ioniq6a` and `ioniq6b` folders
+   - For Ioniq 5 N, upload the `ioniq5na`  and `ioniq5nb`  folders
 
-3.	First Start off adding the Fonts and files you have uploaded from fonts folder to home assistant, to do this settings/Dashboards and then click the 3 dots in the top right and click resources. Click add resource and paste /local/loadfonts.js (make sure javascript module is selected, then click add resource again and paste /local/fonts.css and this time select style sheet.
+2.  Upload the  chargeport  `folder` into your `www` folder (local)
 
-4.	NEXT OPEN THE file "add to configuration.yaml" you downloaded and open it, change only the text in CAPS and replace with the sensor names asked for that you have in your hyundai/kia integration you just installed. Sensor names are something like: sensor.ioniq5_ev_battery_level 
-	# Double check before continuing once you are sure its right, open your home assistant and go to studio code (or via file browser if you have samba setup) open the configuration.yaml in home assistant and copy and paste the text into your configuration.yaml in home assistant.
-	
-5.	Go to developer tools, stay on the the yaml tab and  scroll down and click on TEMPLATE ENTITIES
+3.  Add the fonts and files you have uploaded from fonts folder to home assistant. To do this within Settings/Dashboards:
+   1. Click the 3 dots in the top right and click Resources.
+   2. Click [+ ADD RESOURCE]
+   3. Enter `/local/loadfonts.js` for the URL
+   4. Verify "JavaScript module" is selected
+   5. Click [CREATE]
+   6. Click [+ ADD RESOURCE]
+   7. Enter `/local/fonts.css` for the URL
+   8. Verify "Stylesheet" is selected
+   9. Click [CREATE]
 
-6.	Decide if you want both top down and rear view, or just one of the two bottom ones from the photo are the alt versions.
+4.  NEXT OPEN THE file "add to configuration.yaml" you downloaded and open it, change only the text in CAPS and replace with the sensor names asked for that you have in your hyundai/kia integration you just installed. Sensor names are something like: sensor.ioniq5_ev_battery_level 
+    # Double check before continuing once you are sure its right, open your home assistant and go to studio code (or via file browser if you have samba setup) open the configuration.yaml in home assistant and copy and paste the text into your configuration.yaml in home assistant.
+    
+5.  Go to developer tools, stay on the the yaml tab and scroll down and click on TEMPLATE ENTITIES
 
-7.	To add a card, open one of the "ioniq xxx view card.yaml" files in a text editor and copy the code. Add a new card on a dashboard, choose manual (very bottom) and paste the code into the text field. Make sure to delete anything that was in there before. Save. Done. Repeat for other views as desired.
-	(warning I dont have a ioniq 6 so you will have to change the the caps lock sensors to match yours, once this is done follow the rest of the insturctions)
+6.  Decide if you want both top down and rear view, or just one of the two bottom ones from the photo are the alt versions.
 
+7.  Add the card for the first view you selected
+   1. Open one of the `ioniq `xxx` view card.yaml` files in a text editor
+   2. Update any required elements
+      * Ioniq 5
+         1. If you have a left-hand drive vehicle make the following substitutions if using `ioniq 5 top view card.yaml`
+            1. Change `ioniq5-top-rhd.png` to `ioniq5-top-lhd.png`
+            2. Change `wheel.png` to `wheel--lhd.png`
+            3. Change `wheel-on.png` to `wheel-on--lhd.png`
+      * Ioniq 6
+         1. Replace the entities described in ALL-CAPs with the names from your vehicle
+            # If you have the enthusiasm, commit this updated yaml to a github repo and submit a pull request of just the view card yamls with these details included
+         2. If you have a left-hand drive vehicle make the following substitutions if using `ioniq 6 top view card.yaml`
+            1. Change `ioniq6-top-rhd.png` to `ioniq6-top-lhd.png`
+            2. Change `wheel-on.png` to `wheel-on-lhd.png`
+      * Ioniq 5 N
+         1. If you have a left-hand drive vehicle make the following substitutions if using `ioniq 5n top view card.yaml`
+            1. Change `ioniq5-top-rhd.png` to `ioniq5-top-lhd.png`
+            2. Change `wheel-on.png` to `wheel-on--lhd.png`
+   3. Select all the yaml text in the editor and copy
+   4. Add a new card on a dashboard
+   5. Choose manual (very bottom)
+   6. Delete anything that is in the text field
+   7. Paste the markup copied from the yaml file into the text field
+   8. Save. Done.
+8. Repeat for other views as desired
 
-
-
-# For the top down view if your car is left hand drive use these instead
-
-------------------------------------------------------------
-
-```
-type: picture-elements
-image: /local/ioniq5b/ioniq5-top-lhd.png ((or for 6 users use /local/ioniq6b/ioniq6-top-lhd.png )
-elements:
-  - type: image
-    entity: device_tracker.ioniq5_device_tracker (ioniq 6 users put your device tracker in here for the car)
-    image: /local/ioniq5b/ioniq5-top-lhd.png (or for 6 users use /local/ioniq6b/ioniq6-top-lhd.png )
-    style:
-      left: 50%
-      top: 50%
-      width: 100%
-      heigth: 100%
-
-  - type: image
-    entity: binary_sensor.ioniq_5_steering_wheel_heater (ioniq 6 users put your steering wheel heater sensor in here)
-    state_image:
-      'off': /local/ioniq5b/wheel--lhd.png 
-      'on': /local/ioniq5b/wheel-on--lhd.png  (ioniq 6 users only need to change this entity to ---  'on': /local/ioniq6b/wheel-on--lhd.png
-```
 
 --------------------------------------------------------------
 

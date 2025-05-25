@@ -157,8 +157,8 @@ elements:
   - type: image
     entity: PLACE YOUR EV PLUG SENSOR HERE
     state_image:
-      "off": /local/ioniqa/unplugged.png
-      "on": /local/ioniqa/pluggedin.png
+      "off": /local/ioniq6a/unplugged.png
+      "on": /local/ioniq6a/pluggedin.png
     style:
       top: 43%
       left: 87%

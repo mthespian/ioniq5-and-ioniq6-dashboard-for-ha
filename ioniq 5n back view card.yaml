@@ -1,9 +1,9 @@
 type: picture-elements
-image: /local/ioniqna/ioniq5-back.png
+image: /local/ioniq5na/ioniq5-back.png
 elements:
   - type: image
     entity: sensor.ioniq_5_data
-    image: /local/ioniqna/ioniq5-back.png
+    image: /local/ioniq5na/ioniq5-back.png
     style:
       left: 50%
       top: 50%
@@ -14,16 +14,16 @@ elements:
       action: none
     image: /local/ioniq2/centre-squares.png
     state_image:
-      "10": /local/ioniqna/10.png
-      "20": /local/ioniqna/20.png
-      "30": /local/ioniqna/30.png
-      "40": /local/ioniqna/40.png
-      "50": /local/ioniqna/50.png
-      "60": /local/ioniqna/60.png
-      "70": /local/ioniqna/70.png
-      "80": /local/ioniqna/80.png
-      "90": /local/ioniqna/90.png
-      "100": /local/ioniqna/100.png
+      "10": /local/ioniq5na/10.png
+      "20": /local/ioniq5na/20.png
+      "30": /local/ioniq5na/30.png
+      "40": /local/ioniq5na/40.png
+      "50": /local/ioniq5na/50.png
+      "60": /local/ioniq5na/60.png
+      "70": /local/ioniq5na/70.png
+      "80": /local/ioniq5na/80.png
+      "90": /local/ioniq5na/90.png
+      "100": /local/ioniq5na/100.png
     style:
       left: 50%
       top: 50%
@@ -39,7 +39,7 @@ elements:
       action: none
     image: /local/ioniqa/night-light.png
     state_image:
-      "on": /local/ioniqna/night-light-on.png
+      "on": /local/ioniq5na/night-light-on.png
     style:
       left: 50%
       top: 50%
@@ -47,7 +47,7 @@ elements:
       heigth: 100%
   - type: image
     entity: device_tracker.ioniq5_device_tracker
-    image: /local/ioniqna/backpanel.png
+    image: /local/ioniq5na/backpanel.png
     style:
       left: 50%
       top: 50%
@@ -59,7 +59,7 @@ elements:
       action: none
     image: /local/ioniqa/brake-light.png
     state_image:
-      "on": /local/ioniqna/brake-light-on.png
+      "on": /local/ioniq5na/brake-light-on.png
       "off": /local/ioniqa/brake-light.png
     style:
       left: 50%
@@ -101,8 +101,8 @@ elements:
   - type: image
     entity: binary_sensor.ioniq_5_ev_battery_plug
     state_image:
-      "off": /local/ioniqna/unplugged.png
-      "on": /local/ioniqna/pluggedin.png
+      "off": /local/ioniq5na/unplugged.png
+      "on": /local/ioniq5na/pluggedin.png
     style:
       top: 31%
       left: 88%
